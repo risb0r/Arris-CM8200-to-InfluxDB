@@ -64,3 +64,11 @@ Place the below into crontab. Ctrl + X to exit.
 */5 * * * * /usr/bin/python3 /opt/arris_stats/cm8200b_stats.py
 ```
 
+### Setting up Grafana
+
+Setup the data source as below;
+![Datasource Overview](https://github.com/risb0r/Arris_Stats/blob/master/images/datasource.png)
+
+Import the .json
+
+Happy graphing!
