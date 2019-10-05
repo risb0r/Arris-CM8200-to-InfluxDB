@@ -66,9 +66,18 @@ Place the below into crontab. Ctrl + X to exit.
 
 ### Setting up Grafana
 
-Setup the data source as below;
+Setup the data source as below
+
 ![Datasource Overview](https://github.com/risb0r/Arris_Stats/blob/master/images/datasource.png)
+
 
 Import the .json
 
-Happy graphing!
+If the images are out of wack check the grafana.ini file for the following config change.
+```bash
+$ sudo nano /etc/grafana/grafana.ini
+
+[panels]
+# If set to true Grafana will allow script tags in text panels. Not recommended as it enable XSS vulnerabilities.
+disable_sanitize_html = true
+```
