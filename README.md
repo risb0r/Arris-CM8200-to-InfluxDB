@@ -100,3 +100,7 @@ $ sudo nano /etc/grafana/grafana.ini
 # If set to true Grafana will allow script tags in text panels. Not recommended as it enable XSS vulnerabilities.
 disable_sanitize_html = true
 ```
+# Thanks
+Thanks to Andy Fraley (https://github.com/andrewfraley/arris_cable_modem_stats) for the initial starting point and grafana json.
+Thanks to Luckst0r for the current python base code and doing some testing.
+There are a few of us lurking on the AussieBroadband discord that are using this.
