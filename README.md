@@ -2,6 +2,24 @@
 
 This is a python script to webscrape the Arris CM8200 web interface and place data into Influxdb for graphing in Grafana.
 This assumes that Grafana and Influxdb are already installed and working.
+This also asusmes that the Arris modem is accessible from within the end users WAN.
+
+As an UBNT user the below should gain you access assuming NBN has not disabled access.
+```bash
+risbo@Edge:~$ configure
+[edit]
+risbo@Edge#
+
+set interfaces pseudo-ethernet peth0 address 192.168.0.2/24
+set interfaces pseudo-ethernet peth0 description 'Modem Access'
+set interfaces pseudo-ethernet peth0 link eth0
+commit
+set service nat rule 5000 description 'masquerade for HFC Modem'
+set service nat rule 5000 outbound-interface peth0
+set service nat rule 5000 type masquerade
+commit
+save
+```
 ![Grafana Overview](https://github.com/risb0r/Arris_Stats/blob/master/images/overview.png)
 
 ## Installation
