@@ -107,23 +107,8 @@ There are a few of us lurking on the AussieBroadband discord that are using this
 
 
 ## Current known issues
-Uptime section of the script won't print out in json;
-```python
-                json_body = [
-                    {
-                        "measurement": "uptime",
-                        "tags": {
-                            "host": "cm8200b",
-			    "up_time": table_data[0].text,
-                        },
-                        "fields": {
-                           "uptime_d_h": line,
-                           "uptime_full": table_data[1].text,
-                         }
-                     }
-                ]
-                print(json_body)
-                client.write_points(json_body)
-```                
-Currently minimal logging/debugging capabilities
-Unable to install as service with a sleep interval
+Uptime section of the script won't print out in json.
+           
+Currently minimal logging/debugging capabilities.
+
+Unable to install as service with a sleep interva.
