@@ -110,15 +110,14 @@ $ sudo nano /etc/grafana/grafana.ini
 # If set to true Grafana will allow script tags in text panels. Not recommended as it enable XSS vulnerabilities.
 disable_sanitize_html = true
 ```
+## Current known issues        
+Currently minimal logging/debugging capabilities.
+
+Unable to install as service with a sleep interval.
+
 # Thanks
 Thanks to [Andy Fraley](https://github.com/andrewfraley/arris_cable_modem_stats) for the initial starting point and grafana json.
 Thanks to Luckst0r for the current python base code and doing some testing.
 There are a few of us lurking on the [AussieBroadband Unofficial Discord](https://forums.whirlpool.net.au/archive/2713195) that are using this and would like to discuss further.
 
 CMTS info is a static item and is available on [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) thanks to [Roger Ramband](https://forums.whirlpool.net.au/user/117375) for making this data readily available. This data is only relevant to those connected via the NBN in Australia. Can be skipped, removed, deleted, whatever for others.
-
-
-## Current known issues        
-Currently minimal logging/debugging capabilities.
-
-Unable to install as service with a sleep interval.
