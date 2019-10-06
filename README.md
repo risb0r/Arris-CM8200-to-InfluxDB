@@ -27,11 +27,16 @@ save
 
 ## Installation
 
+Clone to machine. I chose to personally run this from the `/opt/` directory.
+```bash
+git clone https://github.com/risb0r/Arris-CM8200-to-InfluxDB.git arris_stats
+```
+
+Install python3, python3pip and python3-lxml as required.
 ```bash
 sudo apt install python3 python3-pip python3-lxml
 ```
 Use the pip package manager pip3 to install necessary requirements.
-
 ```bash
 pip install -r requirements.txt
 ```
