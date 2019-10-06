@@ -211,7 +211,7 @@ def main():
                 # drop all the minutes and other nonsense
                 linetemp = table_data[1].text.split(' ', 1)[1]
                 line = table_data[1].text.split(' ', 1)[0] + ' ' + linetemp.split(':', 1)[0]
-                print(line)
+                #print(line)
 
                 json_body = [
                     {
