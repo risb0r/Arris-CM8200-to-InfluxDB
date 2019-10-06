@@ -20,7 +20,7 @@ set service nat rule 5000 type masquerade
 commit
 save
 ```
-![Grafana Overview](https://github.com/risb0r/Arris_Stats/blob/master/images/overview.png)
+![Grafana Overview](https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/overview.png)
 
 ## Installation
 
@@ -72,6 +72,8 @@ Standalone (once off)
 /usr/bin/python3 /opt/arris_stats/cm8200b_stats.py
 ```
 
+![cm8200_stats.py Output](https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/output.png)
+
 As cron
 ```bash
 sudo crontab -e
@@ -87,7 +89,7 @@ Place the below into crontab. Ctrl + X to exit.
 
 Setup the data source as below
 
-![Datasource Overview](https://github.com/risb0r/Arris_Stats/blob/master/images/datasource.png)
+![Datasource Overview](https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/datasource.png)
 
 
 Import the .json
