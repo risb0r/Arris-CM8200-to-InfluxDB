@@ -101,11 +101,11 @@ $ sudo nano /etc/grafana/grafana.ini
 disable_sanitize_html = true
 ```
 # Thanks
-Thanks to ![Andy Fraley](https://github.com/andrewfraley/arris_cable_modem_stats) for the initial starting point and grafana json.
+Thanks to [Andy Fraley](https://github.com/andrewfraley/arris_cable_modem_stats) for the initial starting point and grafana json.
 Thanks to Luckst0r for the current python base code and doing some testing.
 There are a few of us lurking on the AussieBroadband discord that are using this.
 
-CMTS info is a static item is available on ![Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) thanks to ![Roger Ramband](https://forums.whirlpool.net.au/user/117375) for making this data readily available.
+CMTS info is a static item is available on [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) thanks to ![Roger Ramband](https://forums.whirlpool.net.au/user/117375) for making this data readily available.
 
 
 ## Current known issues
