@@ -107,6 +107,8 @@ There are a few of us lurking on the [AussieBroadband Unofficial Discord](https:
 
 CMTS info is a static item and is available on [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) thanks to [Roger Ramband](https://forums.whirlpool.net.au/user/117375) for making this data readily available.
 
+Thanks to 'Charlie' (you know who you are) for testing a couple of times and reporting back some issues.
+
 
 ## Current known issues
 Uptime section of the script won't print out in json.
