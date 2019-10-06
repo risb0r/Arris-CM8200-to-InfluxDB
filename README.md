@@ -4,6 +4,8 @@ This is a python script to webscrape the Arris CM8200 web interface and place da
 This assumes that Grafana and Influxdb are already installed and working.
 This also asusmes that the Arris modem is accessible from within the end users WAN.
 
+Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5seconds. Unfortuantly this is just how it is from the NBN overlords.
+
 As an UBNT user the below should gain you access assuming NBN has not disabled access.
 ```bash
 risbo@Edge:~$ configure
