@@ -118,9 +118,7 @@ There are a few of us lurking on the [AussieBroadband Unofficial Discord](https:
 CMTS info is a static item and is available on [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) thanks to [Roger Ramband](https://forums.whirlpool.net.au/user/117375) for making this data readily available. This data is only relevant to those connected via the NBN in Australia. Can be skipped, removed, deleted, whatever for others.
 
 
-## Current known issues
-Uptime section of the script won't print out in json.
-           
+## Current known issues        
 Currently minimal logging/debugging capabilities.
 
 Unable to install as service with a sleep interval.
