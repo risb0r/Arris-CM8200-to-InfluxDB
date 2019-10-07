@@ -38,7 +38,7 @@ sudo apt install python3 python3-pip python3-lxml
 ```
 Use the pip package manager pip3 to install necessary requirements.
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Setup influx with a database
