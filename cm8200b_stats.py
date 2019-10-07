@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import sys
 from urllib.request import urlopen
@@ -35,6 +35,9 @@ def main():
         return 1
     soup = BeautifulSoup(resp.read(),"lxml")
 
+
+# COLLECT DOWNSTREAMSTREAM DATA
+
     # Get table
     try:
         table = soup.find_all('table')[1] # Grab the first table
@@ -60,7 +63,7 @@ def main():
         if table_data:
             n_rows+=1
             if n_rows > 0:
-
+               # Simple math to turn frequency into MHz
                dfreq = float(table_data[3].text.split(' ', 1)[0])
                dfreq = int(dfreq / 1000000)
 
@@ -88,12 +91,12 @@ def main():
                print(json_body)
                client.write_points(json_body)
 
-################## DO UPSTREAM
+
+# COLLECT UPSTREAM DATA
 
     # Get table
     try:
         table = soup.find_all('table')[2] # Grab the first table
-#        table = soup.find('table')
     except AttributeError as e:
         print ('No tables found, exiting')
         return 1
@@ -113,10 +116,11 @@ def main():
         if table_data:
             n_rows+=1
             if n_rows > 0:
-
+               # Simple math to turn frequency into MHz
                upfreq = float(table_data[4].text.split(' ', 1)[0])
                upfreq = upfreq / 1000000
 
+               # Simple math to turn frequency into MHz
                chanwide = float(table_data[5].text.split(' ', 1)[0])
                chanwide = chanwide / 1000000
 
@@ -148,6 +152,9 @@ def main():
         print ('An error occured fetching %s \n %s' % (url2, e.reason))   
         return 1
     soup = BeautifulSoup(resp.read(),"lxml")
+
+
+# COLLECT FIRMWARE DATA
 
     # Get table
     try:
@@ -186,9 +193,12 @@ def main():
                 print(json_body)
                 client.write_points(json_body)
 
+
+# COLLECT UPTIME DATA
+
+    # Get table
     try:
         table = soup.find_all('table')[1] # Grab the first table
-#        table = soup.find('table')
     except AttributeError as e:
         print ('No tables found, exiting')
         return 1
@@ -211,7 +221,6 @@ def main():
                 # drop all the minutes and other nonsense
                 linetemp = table_data[1].text.split(' ', 1)[1]
                 line = table_data[1].text.split(' ', 1)[0] + ' ' + linetemp.split(':', 1)[0]
-                #print(line)
 
                 json_body = [
                     {
