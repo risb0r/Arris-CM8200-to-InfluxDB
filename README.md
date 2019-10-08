@@ -37,6 +37,7 @@ Install python3, python3pip and python3-lxml as required.
 sudo apt install python3 python3-pip python3-lxml
 ```
 Use the pip package manager pip3 to install necessary requirements.
+Note: Requirements may also have to be installed as `root` depending on your setup.
 ```bash
 pip3 install -r requirements.txt
 ```
