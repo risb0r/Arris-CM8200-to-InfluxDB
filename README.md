@@ -7,7 +7,7 @@ This also asusmes that the Arris modem is accessible from within the end users W
 
 Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5seconds. Unfortuantly this is just how it is from the NBN overlords.
 
-As an UBNT user the below should gain you access assuming NBN has not disabled access.
+As an UBNT user the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
 ```bash
 risbo@Edge:~$ configure
 [edit]
