@@ -55,8 +55,8 @@ def main():
         return 1
 
     # Get data
-    n_rows=0
-	for row in rows:
+n_rows=0
+for row in rows:
 
         table_data = row.find_all('td')
         if table_data:
@@ -85,7 +85,7 @@ def main():
 }
                ]
                print(json_body)
-               #client.write_points(json_body)
+               client.write_points(json_body)
 
 
 # COLLECT UPSTREAM DATA
@@ -137,7 +137,7 @@ def main():
                     }
                ]
                print(json_body)
-               #client.write_points(json_body)
+               client.write_points(json_body)
 
     try:
         resp = urlopen(generalstats)
@@ -184,7 +184,7 @@ def main():
                      }
                 ]
                 print(json_body)
-                #client.write_points(json_body)
+                client.write_points(json_body)
 
 
 # COLLECT UPTIME DATA
@@ -229,7 +229,7 @@ def main():
                      }
                 ]
                 print(json_body)
-                #client.write_points(json_body)
+                client.write_points(json_body)
 		
     # Make soup
     try:
@@ -281,7 +281,7 @@ def main():
 }
                ]
                print(json_body)
-               #client.write_points(json_body)
+               client.write_points(json_body)
 
 
 if __name__ == '__main__':
