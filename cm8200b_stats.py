@@ -9,7 +9,7 @@ from influxdb import InfluxDBClient
 from datetime import datetime
 
 # Change settings below to your influxdb - database needs to be created or existing db
-# creates 4 tables - downlink, uplink, fw_ver, uptime
+# creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
 
 influxip = "127.0.0.1"
 influxport = 8086
@@ -55,8 +55,8 @@ def main():
         return 1
 
     # Get data
-n_rows=0
-for row in rows:
+    n_rows=0
+    for row in rows:
 
         table_data = row.find_all('td')
         if table_data:
@@ -230,7 +230,7 @@ for row in rows:
                 ]
                 print(json_body)
                 client.write_points(json_body)
-		
+
     # Make soup
     try:
         resp = urlopen(logstats)
@@ -269,14 +269,17 @@ for row in rows:
                json_body = [
                    {
                        "measurement": "event_log",
-		                   "time": current_time,
+			   #"time": current_time,
                        "fields": {
-                           "id": table_data[1].text,
+                           "time_d_t": table_data[0].text,
+			   "id": table_data[1].text,
                            "level": table_data[2].text,
-                           "desc": table_data[3].text
+                           "desc": table_data[3].text,
+			   "latest_reading": current_time
                         },
                        "tags": {
-                           "history": table_data[0].text
+                           "tag_timestamp": table_data[0].text,
+			   "tag_id": table_data[1].text
                        }
 }
                ]
