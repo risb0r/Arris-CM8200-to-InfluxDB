@@ -12,7 +12,7 @@ from datetime import datetime
 # creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
 
 influxip = "127.0.0.1"
-influxport = 8086
+influxport = "8086"
 influxdb = "cm8200b_stats"
 influxid = "admin"
 influxpass = ""
@@ -242,6 +242,10 @@ def main():
 
 # COLLECT EVENT_LOG DATA
 
+    # Remove previous log information as its not required. This will also more or less simulate a reboot thus losing previous log files
+    # It also aids in the selection of the logs ensuring none are skipped due to same time stamps etc..
+    client.drop_measurement("event_log")
+
     # Get table
     try:
         table = soup.find_all('table')[0] # Grab the first table
@@ -269,17 +273,14 @@ def main():
                json_body = [
                    {
                        "measurement": "event_log",
-			   #"time": current_time,
                        "fields": {
                            "time_d_t": table_data[0].text,
 			   "id": table_data[1].text,
                            "level": table_data[2].text,
-                           "desc": table_data[3].text,
-			   "latest_reading": current_time
-                        },
+                           "desc": table_data[3].text
+                       },
                        "tags": {
-                           "tag_timestamp": table_data[0].text,
-			   "tag_id": table_data[1].text
+                           "tag_timestamp": table_data[0].text
                        }
 }
                ]
