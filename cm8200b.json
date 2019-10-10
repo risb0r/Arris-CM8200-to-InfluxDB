@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1570661250547,
+  "iteration": 1570747740567,
   "links": [],
   "panels": [
     {
@@ -1684,11 +1684,12 @@
       "type": "row"
     },
     {
+      "cacheTimeout": null,
       "columns": [],
       "datasource": "${DS_ARRIS_CM8200B}",
       "fontSize": "100%",
       "gridPos": {
-        "h": 15,
+        "h": 11,
         "w": 24,
         "x": 0,
         "y": 43
@@ -1696,11 +1697,12 @@
       "id": 1023,
       "links": [],
       "options": {},
-      "pageSize": 20,
+      "pageSize": 15,
+      "pluginVersion": "6.4.2",
       "scroll": false,
       "showHeader": true,
       "sort": {
-        "col": 3,
+        "col": 2,
         "desc": true
       },
       "styles": [
@@ -1719,7 +1721,7 @@
           "linkTooltip": "CM-OSSIv3.1 Specification - CableLabs Community",
           "linkUrl": "https://community.cablelabs.com/wiki/plugins/servlet/cablelabs/alfresco/download?id=2a5bfefd-09d3-4155-85d6-04df21120839;1.1",
           "mappingType": 1,
-          "pattern": "id",
+          "pattern": "Event ID",
           "preserveFormat": false,
           "sanitize": false,
           "thresholds": [],
@@ -1727,36 +1729,18 @@
           "unit": "short"
         },
         {
-          "alias": "Event Details",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "desc",
-          "preserveFormat": false,
-          "sanitize": true,
-          "thresholds": [],
-          "type": "string",
-          "unit": "short",
-          "valueMaps": []
-        },
-        {
           "alias": "Priority Level",
-          "colorMode": "row",
+          "colorMode": "value",
           "colors": [
-            "#C4162A",
-            "#FA6400",
-            "#37872D"
+            "#E02F44",
+            "#FF780A",
+            "#3274D9"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
+          "link": false,
           "mappingType": 1,
-          "pattern": "level",
+          "pattern": "Alert Level",
           "preserveFormat": false,
           "rangeMaps": [
             {
@@ -1808,35 +1792,19 @@
           ]
         },
         {
-          "alias": "",
+          "alias": "Event Timestamp",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "dateFormat": "MMMM D, YYYY LT",
           "decimals": 2,
           "mappingType": 1,
-          "pattern": "Time",
+          "pattern": "Date / Time",
           "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "tag_id",
-          "thresholds": [],
-          "type": "hidden",
+          "type": "date",
           "unit": "short"
         },
         {
@@ -1856,19 +1824,19 @@
           "unit": "short"
         },
         {
-          "alias": "Event Timestamp",
+          "alias": "",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "dateFormat": "MMMM D, YYYY LT",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "mappingType": 1,
-          "pattern": "last",
+          "pattern": "Time",
           "thresholds": [],
-          "type": "date",
+          "type": "hidden",
           "unit": "short"
         }
       ],
@@ -1880,19 +1848,13 @@
                 "tag_timestamp"
               ],
               "type": "tag"
-            },
-            {
-              "params": [
-                "tag_id"
-              ],
-              "type": "tag"
             }
           ],
           "limit": "",
           "measurement": "event_log",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT \"time_d_t\" AS \"Date Time\", \"id\" AS \"id\", \"level\", \"desc\" FROM \"event_log\" WHERE $timeFilter GROUP BY time(5m)",
+          "query": "SELECT last(\"time_d_t\"), \"id\", \"level\", \"desc\" FROM \"event_log\" WHERE $timeFilter GROUP BY \"tag_timestamp\", \"tag_id\"",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "table",
@@ -1905,8 +1867,10 @@
                 "type": "field"
               },
               {
-                "params": [],
-                "type": "last"
+                "params": [
+                  "Date / Time"
+                ],
+                "type": "alias"
               }
             ],
             [
@@ -1915,6 +1879,12 @@
                   "id"
                 ],
                 "type": "field"
+              },
+              {
+                "params": [
+                  "Event ID"
+                ],
+                "type": "alias"
               }
             ],
             [
@@ -1923,6 +1893,12 @@
                   "level"
                 ],
                 "type": "field"
+              },
+              {
+                "params": [
+                  "Alert Level"
+                ],
+                "type": "alias"
               }
             ],
             [
@@ -1931,12 +1907,20 @@
                   "desc"
                 ],
                 "type": "field"
+              },
+              {
+                "params": [
+                  "Event Description"
+                ],
+                "type": "alias"
               }
             ]
           ],
           "tags": []
         }
       ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "Event Log",
       "transform": "table",
       "type": "table"
@@ -1948,7 +1932,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 58
+        "y": 54
       },
       "id": 555,
       "panels": [
@@ -11900,6 +11884,6 @@
   },
   "timezone": "browser",
   "title": "Arris CM8200B",
-  "uid": "FQ7wqW2Zz",
-  "version": 44
+  "uid": "",
+  "version": 55
 }
