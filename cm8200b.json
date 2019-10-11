@@ -64,11 +64,11 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1570756889021,
+  "iteration": 1570762441821,
   "links": [],
   "panels": [
     {
-      "content": "<style>\n.aligncenter {\n    text-align: center;\n}\n</style>\n<br>\n<p class=\"aligncenter\">\n<img src=https://www.nbnco.com.au/etc/designs/nbnco2/images/nbn-logo.png><br>\n<img src=https://www.aussiebroadband.com.au/wp-content/themes/AussieBroadband/images/logo-new.png><br><br><br><br>\n<img src=https://www.arris.com/globalassets/images/arris_horizontal_2c_257x25.png><br><br><br><br>\n<img src=https://www.fp.brandfolder.com/api/file/6SUntUbfTUml50xXK6or width=\"350\" height=\"50\"><br><br>\n<small>Powered By <a href=https://github.com/risb0r/Arris-CM8200-to-InfluxDB>Arris-CM8200-to-InfluxDB</a></small>\n</p>\n",
+      "content": "<style>\n.aligncenter {\n    text-align: center;\n}\n</style>\n<p class=\"aligncenter\">\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/nbn_logo.png><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/abb_logo.png><br><br><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/cablelabs_logo.png width=\"350\" height=\"50\"><br><br><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/arris_logo.png><br><br>\n\n<a href=https://github.com/risb0r/Arris-CM8200-to-InfluxDB>\n  <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/github_logo.png width=\"40%\" height=\"40%\">\n  </a>\n</p>\n",
       "datasource": null,
       "gridPos": {
         "h": 13,
@@ -11884,6 +11884,6 @@
   },
   "timezone": "browser",
   "title": "Arris CM8200B",
-  "uid": "FQ7wqW2Zz",
-  "version": 57
+  "uid": "",
+  "version": 60
 }
