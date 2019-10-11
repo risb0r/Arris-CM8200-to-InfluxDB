@@ -111,12 +111,9 @@ $ sudo nano /etc/grafana/grafana.ini
 # If set to true Grafana will allow script tags in text panels. Not recommended as it enable XSS vulnerabilities.
 disable_sanitize_html = true
 ```
-## Current known issues        
-Currently minimal logging/debugging capabilities.
+## To Do List        
 
-Unable to install as service with a sleep interval.
-
-Wishlist Item; Auto scrape [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) and plug in the CMTS info from the wiki rather than just filling out a text box. Personally, I can't be bothered or care too much for something thats will go mostly unchanged.
+Auto scrape [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) and plug in the CMTS info from the wiki rather than just filling out a text box. Personally, I can't be bothered or care too much for something that will go mostly unchanged.
 
 # Thanks
 Thanks to [Andy Fraley](https://github.com/andrewfraley/arris_cable_modem_stats) for the initial starting point and grafana json.
