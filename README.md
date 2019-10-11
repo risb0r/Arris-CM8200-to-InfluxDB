@@ -59,7 +59,7 @@ cm8200b_stats <------
 Adjust cm8200_stats.py to suite your requirements
 ```python
 # Change settings below to your influxdb - database needs to be created or existing db
-# creates 4 tables - downlink, uplink, fw_ver, uptime
+# creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
 
 influxip = "127.0.0.1"
 influxport = "8086"
@@ -71,6 +71,7 @@ influxpass = ""
 
 linestats = "http://192.168.0.1/cmconnectionstatus.html"
 generalstats = "http://192.168.0.1/cmswinfo.html"
+logstats = "http://192.168.0.1/cmeventlog.html"
 ```
 
 ## Usage
