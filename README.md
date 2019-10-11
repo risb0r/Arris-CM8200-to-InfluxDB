@@ -121,4 +121,6 @@ Thanks to [Andy Fraley](https://github.com/andrewfraley/arris_cable_modem_stats)
 Thanks to Luckst0r for the current python base code and doing some testing.
 There are a few of us lurking on the [AussieBroadband Unofficial Discord](https://forums.whirlpool.net.au/archive/2713195) if any discussion is desired based on this.
 
+Thanks to the team at [Aussie Broadband](https://www.aussiebroadband.com.au/) for providing dope internet on a government cockup.
+
 CMTS info is a static item and is available on [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) thanks to [Roger Ramband](https://forums.whirlpool.net.au/user/117375) for making this data readily available. This data is only relevant to those connected via the NBN in Australia. Can be skipped, removed, deleted, whatever for others.
