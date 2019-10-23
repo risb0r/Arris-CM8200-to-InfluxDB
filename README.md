@@ -2,8 +2,8 @@
 
 This is a python script to webscrape the Arris CM8200 web interface and place data into Influxdb for graphing in Grafana. Its intended use is on the NBN MTM HFC network, specifically the CM8200B. It will however work with other arris modems that use the same UI and others with some modification.
 
-This assumes that Grafana and Influxdb are already installed and working.
-This also asusmes that the Arris modem is accessible from within the end users WAN.
+This assumes that Grafana and Influxdb are already installed and working and that you have a basic understanding of both.
+This also asusmes that the Arris modem is accessible from within the end users LAN(with or without NAT rules etc).
 
 Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5seconds. Unfortuantly this is just how it is from the NBN overlords.
 
