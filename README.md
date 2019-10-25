@@ -1,13 +1,14 @@
+
 # Arris CM8200 to InfluxDB
 
-This is a python script to webscrape the Arris CM8200 web interface and place data into Influxdb for graphing in Grafana. Its intended use is on the NBN MTM HFC network, specifically the CM8200B. It will however work with other arris modems that use the same UI and others with some modification.
+This is a python script to webscrape the Arris CM8200 web interface and place data into InfluxDB for graphing in Grafana. Its intended use is on the NBN MTM HFC network, specifically the CM8200B. It will however work with other Arris modems that use the same UI and others with some modification.
 
-This assumes that Grafana and Influxdb are already installed and working and that you have a basic understanding of both.
-This also asusmes that the Arris modem is accessible from within the end users LAN(with or without NAT rules etc).
+This assumes that Grafana and InfluxDB are already installed and working and that you have a basic understanding of both.
+This also assumes that the Arris modem is accessible from within the end users LAN (with or without NAT rules etc).
 
-Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5seconds. Unfortuantly this is just how it is from the NBN overlords.
+Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5 seconds. Unfortunately this is just how it is from the NBN overlords.
 
-As an UBNT user the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
+As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
 ```bash
 risbo@Edge:~$ configure
 [edit]
