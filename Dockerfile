@@ -1,5 +1,5 @@
 FROM python:3.5-slim
-LABEL maintainer="Tim McBride <tim@deviousgeek.coum>"
+LABEL maintainer="Tim McBride <tim@deviousgeek.com>"
 WORKDIR /app
 
 ADD ["requirements.txt", "cm8200b_stats.py", "./"]
