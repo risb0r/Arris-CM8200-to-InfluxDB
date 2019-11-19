@@ -13,7 +13,7 @@ from datetime import datetime
 
 # Second argument = default value if environment variable is not set.
 influxip = os.environ.get("INFLUXDB_HOST", "127.0.0.1")
-influxport = os.environ.get("INFLUXDB_PORT", "8086")
+influxport = int(os.environ.get("INFLUXDB_PORT", "8086"))
 influxdb = os.environ.get("INFLUXDB_DATABASE", "cm8200b_stats")
 influxid = os.environ.get("INFLUXDB_USERNAME", "admin")
 influxpass = os.environ.get("INFLUXDB_PASSWORD", "")
