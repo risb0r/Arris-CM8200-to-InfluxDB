@@ -89,6 +89,7 @@ As cron
 sudo crontab -e
 ```
 Place the below into crontab. Ctrl + X to exit.
+This will run the script every 300 seconds.
 ```bash
 # m h  dom mon dow   command
 
