@@ -9,6 +9,7 @@ This also assumes that the Arris modem is accessible from within the end users L
 Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5 seconds. Unfortunately this is just how it is from the NBN overlords.
 
 As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
+Users with the more recent ASUS models appear to be able to natively just access the NTD.
 ```bash
 risbo@Edge:~$ configure
 [edit]
@@ -30,7 +31,7 @@ save
 
 Clone to machine. I chose to personally run this from the `/opt/` directory.
 ```bash
-git clone https://github.com/risb0r/Arris-CM8200-to-InfluxDB.git arris_stats
+sudo git clone https://github.com/risb0r/Arris-CM8200-to-InfluxDB.git arris_stats
 ```
 
 Install python3, python3pip and python3-lxml as required.
@@ -40,6 +41,7 @@ sudo apt install python3 python3-pip python3-lxml
 Use the pip package manager pip3 to install necessary requirements.
 Note: Requirements may also have to be installed as `root` depending on your setup.
 ```bash
+cd arris_stats
 pip3 install -r requirements.txt
 ```
 
@@ -57,7 +59,7 @@ name
 cm8200b_stats <------
 ```
 
-Adjust cm8200_stats.py to suite your requirements
+Adjust cm8200_stats.py - Host, Port, Database, Username and Password as neccesary.
 ```python
 # Change settings below to your influxdb - database needs to be created or existing db
 # creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
@@ -68,7 +70,7 @@ influxdb = os.environ.get("INFLUXDB_DATABASE", "cm8200b_stats")
 influxid = os.environ.get("INFLUXDB_USERNAME", "admin")
 influxpass = os.environ.get("INFLUXDB_PASSWORD", "")
 
-# cm8200b URLs - leave these as is unless a firmware upgrade changes them
+# cm8200b URL - Leave this unless your NTD URL is http://192.168.100.1
 ntd_url = os.environ.get("NTD_URL", "http://192.168.0.1")
 ```
 
@@ -116,8 +118,8 @@ Auto scrape [Whirlpool](https://whirlpool.net.au/wiki/cmts-upgrades) and plug in
 
 # Thanks
 Thanks to [Andy Fraley](https://github.com/andrewfraley/arris_cable_modem_stats) for the initial starting point and grafana json.
-Thanks to Luckst0r for the current python base code and doing some testing.
-There are a few of us lurking on the [AussieBroadband Unofficial Discord](https://forums.whirlpool.net.au/archive/2713195) if any discussion is desired based on this.
+Thanks to Luckst0r for the current python base code and doing some testing along with those who have made various contributions.
+There are a few of us lurking on the [AussieBroadband Unofficial Discord](https://forums.whirlpool.net.au/archive/2713195) if ther are any questions or in need of setup assitance.
 
 Thanks to the team at [Aussie Broadband](https://www.aussiebroadband.com.au/) for providing dope internet on a government cockup.
 
