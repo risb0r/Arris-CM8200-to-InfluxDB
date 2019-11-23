@@ -61,18 +61,15 @@ Adjust cm8200_stats.py to suite your requirements
 ```python
 # Change settings below to your influxdb - database needs to be created or existing db
 # creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
-
-influxip = "127.0.0.1"
-influxport = "8086"
-influxdb = "cm8200b_stats"
-influxid = "admin"
-influxpass = ""
+# Second argument = default value if environment variable is not set.
+influxip = os.environ.get("INFLUXDB_HOST", "127.0.0.1")
+influxport = int(os.environ.get("INFLUXDB_HOST_PORT", "8086"))
+influxdb = os.environ.get("INFLUXDB_DATABASE", "cm8200b_stats")
+influxid = os.environ.get("INFLUXDB_USERNAME", "admin")
+influxpass = os.environ.get("INFLUXDB_PASSWORD", "")
 
 # cm8200b URLs - leave these as is unless a firmware upgrade changes them
-
-linestats = "http://192.168.0.1/cmconnectionstatus.html"
-generalstats = "http://192.168.0.1/cmswinfo.html"
-logstats = "http://192.168.0.1/cmeventlog.html"
+ntd_url = os.environ.get("NTD_URL", "http://192.168.0.1")
 ```
 
 ## Usage
