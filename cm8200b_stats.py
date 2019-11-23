@@ -39,7 +39,7 @@ def main():
         return 1
     soup = BeautifulSoup(resp.read(), "lxml")
 
-    # COLLECT DOWNSTREAMSTREAM DATA
+    # COLLECT DOWNSTREAM DATA
 
     # Get table
     try:
@@ -234,6 +234,7 @@ def main():
 
     # Remove previous log information as its not required. This will also more or less simulate a reboot thus losing previous log files
     # It also aids in the selection of the logs ensuring none are skipped due to same time stamps etc..
+    # If anyone has a better way of doing this please let me know or fork it.
     client.drop_measurement("event_log")
 
     # Get table
