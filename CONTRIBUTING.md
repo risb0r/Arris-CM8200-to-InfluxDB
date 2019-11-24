@@ -12,7 +12,7 @@ Nothing fancy here, just:
 
 1. Fork this repo
 2. Commit you code
-3. Submit a pull request. It will be reviewed by maintainers and they'll give you proper feedback so you can iterate over it.
+3. Submit a pull request
 
 Alternatively grab me on the [AussieBroadband Unofficial Discord](https://discord.gg/3VW52mc)!
 
