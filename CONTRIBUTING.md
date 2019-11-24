@@ -1,6 +1,6 @@
 # How to contribute
 
-Hello there. Looks like you are interested in contributing to [<project-name>](<github-repo>), which is just great, so welcome!
+Hello there. Looks like you are interested in contributing to Arris-CM8200-to-InfluxDB, which is just great, so welcome!
   
 We are open to any kind of contribution: code, documentation, bug-fixing (even just reports), feature-requests and anything else you may come up with.
 
@@ -11,8 +11,10 @@ We are open to any kind of contribution: code, documentation, bug-fixing (even j
 Nothing fancy here, just:
 
 1. Fork this repo
-1. Commit you code
-1. Submit a pull request. It will be reviewed by maintainers and they'll give you proper feedback so you can iterate over it.
+2. Commit you code
+3. Submit a pull request. It will be reviewed by maintainers and they'll give you proper feedback so you can iterate over it.
+
+Alternatively grab me on the [AussieBroadband Unofficial Discord](https://discord.gg/3VW52mc)!
 
 #### Considerations
 - Make sure existing tests pass
