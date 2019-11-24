@@ -233,7 +233,7 @@ def main():
     # COLLECT EVENT_LOG DATA
 
     # Remove previous log information as its not required. This will also more or less simulate a reboot thus losing previous log files
-    # It also aids in the selection of the logs ensuring none are skipped due to same time stamps etc..
+    # It also aids in the selection of the logs ensuring none are skipped due to same time stamps etc. I was also having some rather major issues with duplicates and incorrect dispalying within grafana.
     # If anyone has a better way of doing this please let me know or fork it.
     client.drop_measurement("event_log")
 
