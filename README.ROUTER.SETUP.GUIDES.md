@@ -3,7 +3,7 @@
 As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
 
 Note: Your Arris may also be setup to listen on 192.168.100.1/24 so modifying the below `peth0 address` would be required.
-```bash
+```
 @Edge:~$ configure
 [edit]
 @Edge#
