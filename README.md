@@ -8,23 +8,8 @@ This also assumes that the Arris modem is accessible from within the end users L
 
 Just a note, if there is a flap or dropout the Arris NTD will do a soft reboot thus blocking access to the WebUI requiring a factory reset using the reset pin for ~5 seconds. Unfortunately this is just how it is from the NBN overlords.
 
-As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
-Users with the more recent ASUS models appear to be able to natively access the NTD.
-```bash
-risbo@Edge:~$ configure
-[edit]
-risbo@Edge#
+[Click here](https://github.com/risb0r/Arris-CM8200-to-InfluxDB/blob/master/README.ROUTER.SETUP.GUIDES.md) for some end user setup guides for various consumer routers. Feel free to fork and contribute as desired.
 
-set interfaces pseudo-ethernet peth0 address 192.168.0.2/24
-set interfaces pseudo-ethernet peth0 description 'Modem Access'
-set interfaces pseudo-ethernet peth0 link eth0
-commit
-set service nat rule 5000 description 'masquerade for HFC Modem'
-set service nat rule 5000 outbound-interface peth0
-set service nat rule 5000 type masquerade
-commit
-save
-```
 ![Grafana Overview](https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/overview.png)
 
 ## Installation
