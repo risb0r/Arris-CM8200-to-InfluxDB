@@ -46,8 +46,7 @@ cm8200b_stats <------
 
 Adjust cm8200_stats.py - Host, Port, Database, Username and Password as neccesary.
 ```python
-# Change settings below to your influxdb - database needs to be created or existing db
-# creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
+# Change settings below to your influxdb - database needs to be created or existing db creates 5 tables - downlink, uplink, fw_ver, uptime, event_log
 # Second argument = default value if environment variable is not set.
 influxip = os.environ.get("INFLUXDB_HOST", "127.0.0.1")
 influxport = int(os.environ.get("INFLUXDB_HOST_PORT", "8086"))
