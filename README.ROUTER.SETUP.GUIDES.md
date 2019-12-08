@@ -24,3 +24,9 @@ Once this has been completed, committed and saved the following command should r
 ? (192.168.0.1) at aa:9f:ec:09:44:b9 [ether] on peth0
 loop180150120.bng1.vdc01.syd.aussiebb.net (180.150.12.1) at 00:a2:00:b2:00:c2 [ether] on eth0
 ```
+
+## Openwrt
+Placeholder
+
+## Pfsense
+Placeholder
