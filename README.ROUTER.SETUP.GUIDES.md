@@ -1,6 +1,10 @@
 # Router Setup Guides
 These guides assume that the Arris NTD is listening on `192.168.0.1/24` therefor if you find that your Arris is not able to be connected to post a factory reset then I would suggesting trying `192.168.100.1/24`.
 
+The following devices appear to sort it out automatically:
+  * Asus AC68/58 series
+  * Google Wifi
+
 ## Ubiquiti Edge & USG Products
 As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
 ```
