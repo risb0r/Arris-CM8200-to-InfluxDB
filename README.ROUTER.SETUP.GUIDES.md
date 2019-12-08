@@ -18,7 +18,7 @@ set service nat rule 5000 type masquerade
 commit
 save
 ```
-Once this has been completed, committed and saved the following command should return something very similar to the below. (if your WAN is not eth0 then please change accordingly.
+Once this has been completed, committed and saved the following command should return something very similar to the below. (if your WAN is not eth0 then please change accordingly)
 ```
 @Edge:~# arp -a | grep eth0
 ? (192.168.0.1) at xx:xx:xx:xx:xx:xx [ether] on peth0
