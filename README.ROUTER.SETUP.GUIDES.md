@@ -5,8 +5,8 @@ The following devices appear to sort it out automatically:
   * Asus AC68/58 series
   * Google Wifi
 
-## Ubiquiti Edge & USG Products
-As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and USG products.
+## Ubiquiti [EdgeMAX](https://www.ui.com/products/#edgemax) & [Unifi USG](https://www.ui.com/products/#unifi) Products
+As an UBNT user, the below should gain you access assuming NBN has not disabled access. Has been tested on Edgerouter and Unifi USG hardware.
 ```
 @Edge:~$ configure
 [edit]
@@ -29,7 +29,7 @@ Once this has been completed, committed and saved the following command should r
 loop180150120.bng1.vdc01.syd.aussiebb.net (180.150.12.1) at 00:a2:00:b2:00:c2 [ether] on eth0
 ```
 
-## Pfsense
+## [Pfsense](https://www.pfsense.org/)
 ### Summary
 Identify the ethernet interface that the NBN NTD is physically connected to. Check its configuration: Is the WAN working through it directly (Eg. over IPoA)? If so, it is probably set to obtain an IP address via DHCP. However maybe it uses something like PPPoE to establish a higher level link. Either way, to route data to the NTD's admin interface, you will need to define another interface (physical or virtual), and assign it a suitable name, a non-routable IP address and subnet.
 
@@ -49,5 +49,15 @@ Identify the ethernet interface that the NBN NTD is physically connected to. Che
 
 Thanks to [W. Pooler](https://forums.whirlpool.net.au/user/58958 "W. Pooler") for this writeup.
 
-## Openwrt
-Placeholder
+## [OpenWRT](https://openwrt.org)
+In a relatively typical environment the below should work, naturally this won't be perfect for everyone.
+```bash
+uci set network.CM_ACCESS=interface
+uci set network.CM_ACCESS.proto='static'
+uci set network.CM_ACCESS.ifname='eth0.2'
+uci set network.CM_ACCESS.ipaddr='192.168.0.2'
+uci set network.CM_ACCESS.netmask='255.255.255.0'
+uci commit
+/etc/init.d/network restart
+```
+Remember to replace `CM_ACCESS` with the name of interface you wish to name it as, `eth0.2` with the actual interface of your "WAN" which should begin with the words `eth` not `wan` for example. Alternatively, there is a [LuCI/webUI guide](https://simplebeian.wordpress.com/2014/03/12/accessing-your-modem-from-openwrt-router/), should you prefer to go through that route.
