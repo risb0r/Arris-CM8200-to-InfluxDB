@@ -1,52 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_ARRIS_CM8200B",
-      "label": "Arris CM8200B",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "6.4.4"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -63,15 +15,15 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": null,
-  "iteration": 1574502902224,
+  "id": 21,
+  "iteration": 1580393710696,
   "links": [],
   "panels": [
     {
-      "content": "<style>\n.aligncenter {\n    text-align: center;\n}\n</style>\n<p class=\"aligncenter\">\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/nbn_logo.png><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/abb_logo.png><br><br><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/cablelabs_logo.png width=\"350\" height=\"50\"><br><br><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/arris_logo.png><br><br>\n\n<a href=https://github.com/risb0r/Arris-CM8200-to-InfluxDB target=\"_blank\">\n  <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/github_logo.png width=\"40%\" height=\"40%\">\n  </a>\n</p>\n",
+      "content": "<style>\n.aligncenter {\n    text-align: center;\n}\n</style>\n<p class=\"aligncenter\">\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/nbn_logo.png><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/abb_logo.png><br><br><br>\n<!-- <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/sl_logo.png width=\"22%\"><br><br><br> -->\n<!-- <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/iinet_logo.png width=\"15%\"><br><br><br> -->\n<!-- <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/internode_logo.png width=\"18%\"><br><br><br> -->\n<!-- <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/telstra_logo.png width=\"18%\"><br><br><br> -->\n<!-- <img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/tpg_logo.png width=\"15%\"><br><br><br> -->\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/cablelabs_logo.png width=\"350\" height=\"50\"><br><br><br>\n<img src=https://raw.githubusercontent.com/risb0r/Arris-CM8200-to-InfluxDB/master/images/arris_logo.png><br><br>\nPowered By <a href=\"https://github.com/risb0r/Arris-CM8200-to-InfluxDB\">Arris-CM8200-to-InfluxDB</a>\n</p>\n\n",
       "datasource": null,
       "gridPos": {
-        "h": 13,
+        "h": 14,
         "w": 6,
         "x": 0,
         "y": 0
@@ -86,10 +38,10 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "fontSize": "100%",
       "gridPos": {
-        "h": 13,
+        "h": 14,
         "w": 10,
         "x": 6,
         "y": 0
@@ -101,18 +53,20 @@
       "scroll": true,
       "showHeader": true,
       "sort": {
-        "col": null,
-        "desc": false
+        "col": 3,
+        "desc": true
       },
       "styles": [
         {
           "alias": "Time",
+          "align": "auto",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "Time",
           "type": "hidden"
         },
         {
           "alias": "Channel",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -135,6 +89,7 @@
         },
         {
           "alias": "Corrected",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -151,6 +106,7 @@
         },
         {
           "alias": "Power (dBmV)",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -167,6 +123,7 @@
         },
         {
           "alias": "SNR/MER (dB)",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -183,6 +140,7 @@
         },
         {
           "alias": "Modulation",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -207,6 +165,7 @@
         },
         {
           "alias": "Uncorrectables",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -223,6 +182,7 @@
         },
         {
           "alias": "Frequency (MHz)",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -316,10 +276,10 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "fontSize": "100%",
       "gridPos": {
-        "h": 5,
+        "h": 6,
         "w": 8,
         "x": 16,
         "y": 0
@@ -337,12 +297,14 @@
       "styles": [
         {
           "alias": "Time",
+          "align": "auto",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "Time",
           "type": "hidden"
         },
         {
           "alias": "Channel",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -365,6 +327,7 @@
         },
         {
           "alias": "Frequency (MHz)",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -382,6 +345,7 @@
         },
         {
           "alias": "Width (MHz)",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -398,6 +362,7 @@
         },
         {
           "alias": "Power (dBmV)",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -414,6 +379,7 @@
         },
         {
           "alias": "US Channel Type",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -518,7 +484,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 2,
       "format": "short",
       "gauge": {
@@ -532,7 +498,7 @@
         "h": 3,
         "w": 4,
         "x": 16,
-        "y": 5
+        "y": 6
       },
       "id": 821,
       "interval": null,
@@ -643,7 +609,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 2,
       "format": "short",
       "gauge": {
@@ -657,7 +623,7 @@
         "h": 3,
         "w": 4,
         "x": 20,
-        "y": 5
+        "y": 6
       },
       "id": 822,
       "interval": null,
@@ -768,7 +734,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": null,
       "format": "none",
       "gauge": {
@@ -782,7 +748,7 @@
         "h": 3,
         "w": 3,
         "x": 16,
-        "y": 8
+        "y": 9
       },
       "id": 889,
       "interval": null,
@@ -881,7 +847,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": null,
       "format": "none",
       "gauge": {
@@ -895,7 +861,7 @@
         "h": 3,
         "w": 5,
         "x": 19,
-        "y": 8
+        "y": 9
       },
       "id": 890,
       "interval": null,
@@ -991,7 +957,7 @@
         "h": 2,
         "w": 8,
         "x": 16,
-        "y": 11
+        "y": 12
       },
       "id": 956,
       "mode": "html",
@@ -1006,7 +972,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 1,
       "fill": 0,
       "fillGradient": 0,
@@ -1014,8 +980,9 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 14
       },
+      "hiddenSeries": false,
       "id": 485,
       "legend": {
         "alignAsTable": true,
@@ -1142,7 +1109,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 1,
       "fill": 0,
       "fillGradient": 0,
@@ -1150,8 +1117,9 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 21
       },
+      "hiddenSeries": false,
       "id": 489,
       "legend": {
         "alignAsTable": true,
@@ -1276,7 +1244,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 1,
       "fill": 0,
       "fillGradient": 0,
@@ -1284,8 +1252,9 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 28
       },
+      "hiddenSeries": false,
       "id": 484,
       "legend": {
         "alignAsTable": true,
@@ -1410,7 +1379,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 0,
       "fill": 0,
       "fillGradient": 0,
@@ -1418,8 +1387,9 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 35
       },
+      "hiddenSeries": false,
       "id": 887,
       "legend": {
         "alignAsTable": false,
@@ -1544,7 +1514,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "decimals": 0,
       "fill": 0,
       "fillGradient": 0,
@@ -1552,8 +1522,9 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 34
+        "y": 35
       },
+      "hiddenSeries": false,
       "id": 888,
       "interval": "",
       "legend": {
@@ -1689,7 +1660,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 43
       },
       "id": 1022,
       "panels": [],
@@ -1699,13 +1670,13 @@
     {
       "cacheTimeout": null,
       "columns": [],
-      "datasource": "${DS_ARRIS_CM8200B}",
+      "datasource": "Arris CM8200B",
       "fontSize": "100%",
       "gridPos": {
         "h": 11,
         "w": 24,
         "x": 0,
-        "y": 43
+        "y": 44
       },
       "id": 1023,
       "links": [],
@@ -1721,6 +1692,7 @@
       "styles": [
         {
           "alias": "Event ID",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1743,6 +1715,7 @@
         },
         {
           "alias": "Priority Level",
+          "align": "auto",
           "colorMode": "value",
           "colors": [
             "#E02F44",
@@ -1806,6 +1779,7 @@
         },
         {
           "alias": "Event Timestamp",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1822,6 +1796,7 @@
         },
         {
           "alias": "",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1838,6 +1813,7 @@
         },
         {
           "alias": "",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1945,7 +1921,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 54
+        "y": 55
       },
       "id": 555,
       "panels": [
@@ -1954,7 +1930,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2097,7 +2073,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2240,7 +2216,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2383,7 +2359,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2526,7 +2502,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2671,7 +2647,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2816,7 +2792,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -2961,7 +2937,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3106,7 +3082,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3251,7 +3227,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3396,7 +3372,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3541,7 +3517,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3686,7 +3662,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3831,7 +3807,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -3976,7 +3952,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4121,7 +4097,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4266,7 +4242,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4411,7 +4387,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4556,7 +4532,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4701,7 +4677,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4846,7 +4822,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -4991,7 +4967,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -5136,7 +5112,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -5281,7 +5257,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -5426,7 +5402,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -5571,7 +5547,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -5716,7 +5692,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -5861,7 +5837,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6006,7 +5982,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6151,7 +6127,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6296,7 +6272,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6441,7 +6417,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6586,7 +6562,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6731,7 +6707,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -6876,7 +6852,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7021,7 +6997,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7166,7 +7142,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7311,7 +7287,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7456,7 +7432,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7601,7 +7577,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7746,7 +7722,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -7891,7 +7867,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8036,7 +8012,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8181,7 +8157,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8326,7 +8302,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8471,7 +8447,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8616,7 +8592,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8761,7 +8737,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -8906,7 +8882,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9051,7 +9027,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9196,7 +9172,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9341,7 +9317,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9486,7 +9462,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9631,7 +9607,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9776,7 +9752,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -9921,7 +9897,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10066,7 +10042,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10211,7 +10187,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10356,7 +10332,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10501,7 +10477,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10646,7 +10622,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10791,7 +10767,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -10936,7 +10912,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -11081,7 +11057,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -11226,7 +11202,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -11371,7 +11347,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -11516,7 +11492,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -11661,7 +11637,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_ARRIS_CM8200B}",
+          "datasource": "Arris CM8200B",
           "decimals": 0,
           "fill": 1,
           "fillGradient": 0,
@@ -11807,7 +11783,7 @@
     }
   ],
   "refresh": "30m",
-  "schemaVersion": 20,
+  "schemaVersion": 22,
   "style": "dark",
   "tags": [
     "Arris",
@@ -11822,8 +11798,12 @@
     "list": [
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_ARRIS_CM8200B}",
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Arris CM8200B",
         "definition": "select DISTINCT(\"channel_id\") from (select power, channel_id from downstream_statistics WHERE $timeFilter)",
         "hide": 0,
         "includeAll": true,
@@ -11844,8 +11824,12 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_ARRIS_CM8200B}",
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Arris CM8200B",
         "definition": "select DISTINCT(\"channel_id\") from (select power, channel_id from upstream_statistics WHERE $timeFilter)",
         "hide": 0,
         "includeAll": true,
@@ -11897,6 +11881,6 @@
   },
   "timezone": "browser",
   "title": "Arris CM8200B",
-  "uid": "FQ7wqW2Zz",
-  "version": 77
+  "uid": "",
+  "version": 88
 }
