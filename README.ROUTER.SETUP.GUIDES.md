@@ -62,4 +62,22 @@ uci commit
 ```
 Remember to replace `CM_ACCESS` with the name of interface you wish to name it as, `eth0.2` with the actual interface of your "WAN" which should begin with the words `eth` not `wan` for example. Alternatively, there is a [LuCI/webUI guide](https://simplebeian.wordpress.com/2014/03/12/accessing-your-modem-from-openwrt-router/), should you prefer to go through that route.
 
+## [MikroTik](https://mikrotik.com/)
+This is assuming 'ether1' is your NBN modem, simply login and attach the IP to ether1.
+```bash
+[admin@MikroTik] > ip address add address=192.168.0.2/24 interface=ether1 network=192.168.0.0
+```
+
+Confirm it works via ping (or `ip address print`):
+```bash
+[admin@MikroTik] > ping 192.168.0.1 count=5
+  SEQ HOST                                     SIZE TTL TIME  STATUS
+    0 192.168.0.1                                56  64 3ms
+    1 192.168.0.1                                56  64 3ms
+    2 192.168.0.1                                56  64 3ms
+    3 192.168.0.1                                56  64 3ms
+    4 192.168.0.1                                56  64 3ms
+    sent=5 received=5 packet-loss=0% min-rtt=3ms avg-rtt=3ms max-rtt=3ms
+```
+
 Thanks to [net-wayfarer](https://github.com/net-wayfarer) for this writeup.
