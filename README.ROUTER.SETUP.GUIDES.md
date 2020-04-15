@@ -69,7 +69,7 @@ This is assuming 'ether1' is your NBN modem uplink, simply login via SSH or teln
 [admin@MikroTik] > ip address add address=192.168.0.2/24 interface=ether1 network=192.168.0.0
 ```
 
-Confirm it works via ping (or "`ip address print`"):
+Confirm it works via ping (or `ip address print`):
 ```bash
 [admin@MikroTik] > ping 192.168.0.1 count=5
   SEQ HOST                                     SIZE TTL TIME  STATUS
