@@ -1,6 +1,14 @@
 
 # Arris CM8200 to InfluxDB
 
+## 29/05/2020 Update
+With great displeasure I'd liket to announce that this project will no longer be maintained due to NBN locking us out of the Modem with the latest firmware release. As it currently stands there is no access and while I will continue to attempt to gain access to the NTD I am certainly not hopeful.
+
+Thanks,
+-risbo
+
+
+
 This is a python script to webscrape the Arris CM8200 web interface and place data into InfluxDB for graphing in Grafana. Its intended use is on the NBN MTM HFC network, specifically the CM8200B. It will however work with other Arris modems that use the same UI and others with some modification.
 
 This assumes that Grafana and InfluxDB are already installed and working and that you have a basic understanding of both.
